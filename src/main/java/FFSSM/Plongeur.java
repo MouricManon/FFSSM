@@ -13,8 +13,8 @@ public class Plongeur extends Personne {
         super(numeroINSEE, nom, prenom, adresse, telephone, naissance);
     }
 
-    public void ajouterlicence(String numero, LocalDate delivrance) {
-        licences.add(new Licence(this, numero, delivrance));
+    public void ajouterlicence(String numero, LocalDate delivrance, Club club) {
+        licences.add(new Licence(this, numero, delivrance, club));
     }
 
     public Licence derniereLicence() {

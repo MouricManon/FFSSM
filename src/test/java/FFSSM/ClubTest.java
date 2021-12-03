@@ -69,8 +69,8 @@ public class ClubTest {
     @Test
     public void testPlongeesNonConformes() {
         HashSet<Plongee> plongee2 = new HashSet<>();
-        president.ajouterlicence("10", date);
-        p1.ajouterlicence("12", delivrance2);
+        president.ajouterlicence("10", date, club);
+        p1.ajouterlicence("12", delivrance2, club);
         plongee.ajouteParticipant(p1);
         plongee.ajouteParticipant(president);
         plongee2.add(plongee);

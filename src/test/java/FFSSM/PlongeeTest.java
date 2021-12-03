@@ -79,24 +79,24 @@ public class PlongeeTest {
      */
     @Test
     public void testEstConforme() {
-        p1.ajouterlicence("12", delivrance2);
-        president.ajouterlicence("12", delivrance2);
+        p1.ajouterlicence("12", delivrance2, club);
+        president.ajouterlicence("12", delivrance2, club);
         plongee3 = new Plongee(site, president, delivrance2, 20, 2);
         assertTrue(plongee3.estConforme(), "Les deux dates sont sensées être conformes");
     }
 
     @Test
     public void testNEstpasConforme() {
-        p1.ajouterlicence("12", delivrance2);
-        president.ajouterlicence("10", date);
+        p1.ajouterlicence("12", delivrance2, club);
+        president.ajouterlicence("10", date, club);
         plongee2 = new Plongee(site, president, delivrance2, 20, 2);
         assertFalse(plongee2.estConforme(), "La date du président est sensée ne pas être conforme");
     }
 
     @Test
     public void testNEstpasConforme2() {
-        p1.ajouterlicence("11", date);
-        president.ajouterlicence("10", date2);
+        p1.ajouterlicence("11", date, club);
+        president.ajouterlicence("10", date2, club);
         assertFalse(plongee.estConforme(), "Les dates sont sensées ne pas être conforme");
     }
 }

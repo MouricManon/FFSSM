@@ -22,13 +22,7 @@ public class Licence {
         this.club = club;
     }
 
-    public Licence(Personne possesseur, String numero, LocalDate delivrance) {
-        this.possesseur = possesseur;
-        this.numero = numero;
-        this.delivrance = delivrance;
-    }
-
-    public void setClub(Club club) {
+     public void setClub(Club club) {
         this.club = club;
     }
 
